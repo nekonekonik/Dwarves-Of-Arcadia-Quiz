@@ -30,3 +30,5 @@ angular.module('dwarvesOfArcadiaQuizApp')
       $window.location = '/#/' + quizProcessor.locale() + '/quiz/Hostile-Dwarf';
     };
   });
+
+  
