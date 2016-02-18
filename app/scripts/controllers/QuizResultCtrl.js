@@ -15,6 +15,14 @@ angular.module('dwarvesOfArcadiaQuizApp')
       $scope.resultDescription = results.slice(0).sort(function(a, b) { return b.value - a.value; })[0].resultDescription;  
       $scope.quote = results.slice(0).sort(function(a, b) { return b.value - a.value; })[0].quote;
       ga("send", "event", $scope.result);
+
+      $scope.shareToFB = function(){
+        FB.ui({
+          method: 'feed',
+          link: 'localhost:9000/#/en-us/',
+          caption: 'DWARVES OF ARCADIA!',
+        }, function(response){});
+      };
     }
 
     initialize();
