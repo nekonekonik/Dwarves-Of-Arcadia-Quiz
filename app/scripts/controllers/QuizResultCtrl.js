@@ -19,7 +19,7 @@ angular.module('dwarvesOfArcadiaQuizApp')
       $scope.shareToFB = function(){
         FB.ui({
           method: 'feed',
-          link: 'localhost:9000/#/en-us/',
+          link: 'https://doa-testing.herokuapp.com',
           caption: 'DWARVES OF ARCADIA!',
         }, function(response){});
       };
