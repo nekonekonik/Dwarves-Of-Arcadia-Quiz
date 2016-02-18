@@ -26,9 +26,8 @@ angular.module('dwarvesOfArcadiaQuizApp')
         FB.ui({
           method: 'feed',
           link: 'https://doa-testing.herokuapp.com/#/en-us/',
-          description: 'Your dwarf personality:',
           picture: 'https://doa-testing.herokuapp.com/assets/images/' + $scope.result + '-share.png',
-          caption: descriptions[$scope.result],
+          description: descriptions[$scope.result],
         }, function(response){});
       };
     }
