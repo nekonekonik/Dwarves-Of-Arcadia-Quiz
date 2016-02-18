@@ -20,13 +20,13 @@ angular.module('dwarvesOfArcadiaQuizApp')
       quizProcessor.addReligious();
       console.log('religious', quizProcessor.religious());
 
-      $window.location = '/#/' + quizProcessor.locale() + '/Hostile-Dwarf';
+      $window.location = '/#/' + quizProcessor.locale() + '/quiz/Hostile-Dwarf';
     };
 
     $scope.processIntelligent = function() {
       quizProcessor.addIntelligent();
       console.log('intelligent', quizProcessor.intelligent());
 
-      $window.location = '/#/' + quizProcessor.locale() + '/Hostile-Dwarf';
+      $window.location = '/#/' + quizProcessor.locale() + '/quiz/Hostile-Dwarf';
     };
   });

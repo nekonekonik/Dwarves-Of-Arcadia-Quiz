@@ -11,6 +11,9 @@ angular.module('dwarvesOfArcadiaQuizApp')
       ];
 
       $scope.result = results.slice(0).sort(function(a, b) { return b.value - a.value; })[0].personality; 
+      $scope.dwarfType = results.slice(0).sort(function(a, b) { return b.value - a.value; })[0].dwarfType; 
+      $scope.resultDescription = results.slice(0).sort(function(a, b) { return b.value - a.value; })[0].resultDescription;  
+      $scope.quote = results.slice(0).sort(function(a, b) { return b.value - a.value; })[0].quote;
       ga("send", "event", $scope.result);
     }
 
