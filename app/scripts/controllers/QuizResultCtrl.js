@@ -25,7 +25,7 @@ angular.module('dwarvesOfArcadiaQuizApp')
       $scope.shareToFB = function(){
         FB.ui({
           method: 'feed',
-          title: 'Which dwarf personality are you?',
+          name: 'Which dwarf personality are you?',
           link: 'https://doa-testing.herokuapp.com/',
           picture: 'https://doa-testing.herokuapp.com/assets/images/' + $scope.result + '-share.png',
           description: descriptions[$scope.result],
