@@ -22,12 +22,13 @@ angular.module('dwarvesOfArcadiaQuizApp')
       $scope.quote = results.slice(0).sort(function(a, b) { return b.value - a.value; })[0].quote;
       ga("send", "event", $scope.result);
 
+      console.log('assets/images/' + $scope.result + ".png");
       $scope.shareToFB = function(){
         FB.ui({
           method: 'feed',
           link: 'https://doa-testing.herokuapp.com/#/en-us/',
           description: 'Your dwarf personality:',
-          picture: 'assets/images/' + $scope.result + ".png",
+          picture: 'https://doa-testing.herokuapp.com/assets/images/' + $scope.result + '.png',
           caption: descriptions[$scope.result],
         }, function(response){});
       };
