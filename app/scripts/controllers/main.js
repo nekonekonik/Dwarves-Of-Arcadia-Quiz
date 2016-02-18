@@ -8,8 +8,13 @@
  * Controller of the dwarvesOfArcadiaQuizApp
  */
 angular.module('dwarvesOfArcadiaQuizApp')
-  .controller('MainCtrl', function ($scope, $window) {
+  .controller('MainCtrl', function ($scope, $window, quizProcessor) {
+
+    $scope.setLocale = function(locale) {
+      quizProcessor.setLocale(locale);
+    };
+
     $scope.quizStart = function() {
-      $window.location = '/#/quiz/Adventure';
+      $window.location = '/#/' + quizProcessor.locale() + '/quiz/Adventure';
     };
   });

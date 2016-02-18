@@ -7,10 +7,13 @@ angular.module('dwarvesOfArcadiaQuizApp')
     var _religious = 0;
     var _intelligent = 0;
 
+    var _locale = '';
+
     this.brave = function() { return _brave; };
     this.business = function() { return _business; };
     this.religious = function() { return _religious; };
     this.intelligent = function() { return _intelligent; };
+    this.locale = function() { return _locale; };
 
     this.addBrave = function() {
       _brave += 1;
@@ -23,5 +26,9 @@ angular.module('dwarvesOfArcadiaQuizApp')
     };
     this.addIntelligent = function() {
       _intelligent += 1;
+    };
+
+    this.setLocale = function(locale) {
+      _locale = locale;
     };
   });

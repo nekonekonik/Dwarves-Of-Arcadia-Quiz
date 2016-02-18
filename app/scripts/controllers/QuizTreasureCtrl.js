@@ -6,28 +6,28 @@ angular.module('dwarvesOfArcadiaQuizApp')
       quizProcessor.addBrave();
       console.log('brave', quizProcessor.brave());
 
-      $window.location = '/#/quiz/The-Calling';
+      $window.location = '/#/' + quizProcessor.locale() + '/quiz/The-Calling';
     };
 
     $scope.processBusiness = function() {
       quizProcessor.addBusiness();
       console.log('business', quizProcessor.business());
 
-      $window.location = '/#/quiz/The-Calling';
+      $window.location = '/#/' + quizProcessor.locale() + '/quiz/The-Calling';
     };
 
     $scope.processReligious = function() {
       quizProcessor.addReligious();
       console.log('religious', quizProcessor.religious());
 
-      $window.location = '/#/quiz/The-Calling';
+      $window.location = '/#/' + quizProcessor.locale() + '/quiz/The-Calling';
     };
 
     $scope.processIntelligent = function() {
       quizProcessor.addIntelligent();
       console.log('intelligent', quizProcessor.intelligent());
 
-      $window.location = '/#/quiz/The-Calling';
+      $window.location = '/#/' + quizProcessor.locale() + '/quiz/The-Calling';
     };
 
   });
