@@ -25,8 +25,8 @@ angular.module('dwarvesOfArcadiaQuizApp')
       $scope.shareToFB = function(){
         FB.ui({
           method: 'feed',
-          link: 'https://doa-testing.herokuapp.com/#/en-us/',
-          picture: 'https://doa-testing.herokuapp.com/assets/images/' + $scope.result + '-share.png',
+          link: 'http://localhost:5000/',
+          picture: 'http://localhost:5000/assets/images/' + $scope.result + '-share.png',
           description: descriptions[$scope.result],
         }, function(response){});
       };
