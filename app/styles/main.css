@@ -138,8 +138,19 @@ div{
   background-color:rgba(60, 175, 255, 0.2);
 }
 
-.dwarf {
+.dwarfContainer {
   margin-right: 10vw;
   float: right;
-  width: 30vw;
+  width: 250px;
+  height: 250px;
+}
+
+.dwarfContainer .dwarf{
+  width: 250px;
+}
+
+
+.dwarfContainer .gameTitle {
+  width: 250px;
+  bottom: 0;
 }
