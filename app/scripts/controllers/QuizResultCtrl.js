@@ -38,8 +38,8 @@ angular.module('dwarvesOfArcadiaQuizApp')
         FB.ui({
           method: 'feed',
           name: 'Which dwarf personality are you?',
-          link: 'https://doa-testing.herokuapp.com/#/en-us',
-          picture: 'https://doa-testing.herokuapp.com/assets/images/' + $scope.result + '-share.png',
+          link: 'http://dwarves-of-arcadia-quiz.herokuapp.com/#/en-us',
+          picture: 'http://dwarves-of-arcadia-quiz.herokuapp.com/assets/images/' + $scope.result + '-share.png',
           description: descriptions[$scope.result],
         }, function(response){});
       };
@@ -48,8 +48,8 @@ angular.module('dwarvesOfArcadiaQuizApp')
         FB.ui({
           method: 'feed',
           name: '你的內在矮人類型是:',
-          link: 'https://doa-testing.herokuapp.com/#/zh-TW',
-          picture: 'https://doa-testing.herokuapp.com/assets/images/' + $scope.result + '-share.png',
+          link: 'http://dwarves-of-arcadia-quiz.herokuapp.com/#/zh-TW',
+          picture: 'http://dwarves-of-arcadia-quiz.herokuapp.com/assets/images/' + $scope.result + '-share.png',
           description: descriptionsTW[$scope.result],
         }, function(response){});
       };
@@ -57,13 +57,13 @@ angular.module('dwarvesOfArcadiaQuizApp')
       $scope.shareToWeiBo = function() {
         WB2.anyWhere(function(W){
             W.widget.publish({
-                action:"pubilish",
+                action:"publish",
                 type:"web",
                 language:"zh_cn",
                 appkey:"3IqWNs",
                 id: "wb_publish",
-                default_text: "我的内在矮人类型是:\n" + descriptionsCN[$scope.result] + "\nhttps://doa-testing.herokuapp.com/#/zh-CN",
-                default_image: 'https://doa-testing.herokuapp.com/assets/images/' + $scope.result + '-share.png',
+                default_text: "我的内在矮人类型是:\n" + descriptionsCN[$scope.result] + "\nhttp://dwarves-of-arcadia-quiz.herokuapp.com/#/zh-CN",
+                default_image: 'http://dwarves-of-arcadia-quiz.herokuapp.com/assets/images/' + $scope.result + '-share.png',
             });
         });
       };
