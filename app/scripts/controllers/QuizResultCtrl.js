@@ -47,6 +47,21 @@ angular.module('dwarvesOfArcadiaQuizApp')
           description: descriptionsTW[$scope.result],
         }, function(response){});
       };
+
+      $scope.shareToWeiBo = function() {
+        WB2.anyWhere(function(W){
+            W.widget.publish({
+                action:"pubilish",
+                type:"web",
+                language:"zh_cn",
+                button_type:"gray",
+                button_size:"middle",
+                tag:"阿卡迪亚小矮人",
+                refer:"y",
+                id: "wb_publisher"
+            });
+        });
+      };
     }
 
     initialize();
