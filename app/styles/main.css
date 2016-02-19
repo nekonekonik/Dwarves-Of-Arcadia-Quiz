@@ -108,15 +108,15 @@ div{
 #question_wrapper .question{
   width:100%;
   height:auto;
-  background-color:rgba(60, 175, 255, 0.4);
+  background-color:rgba(8, 81, 178, 0.7);
   border-top:1px solid #FFFFFF;
   border-bottom:1px solid #FFFFFF;
   text-align:center;
   color:#FFFFFF;
-  font-size:24px;
+  /*font-weight: bold;*/
+  font-size:18px;
   font-family:Verdana, Geneva, sans-serif;
-  line-height:35px;
-  padding:40px 0px;
+  padding:20px 0px;
 }
 
 #question_wrapper .answer{
@@ -126,31 +126,99 @@ div{
   border-top:1px solid #e2e2e2;
   border-bottom:1px solid #e2e2e2;
   text-align:center;
-  color:#767676;
-  font-size:15px;
+  margin-top: 8px;
+  color:#000000;
+  font-size:16px;
+  font-weight: bold;
   font-family:Verdana, Geneva, sans-serif;
   line-height:23px;
-  padding:30px 0px;
+  padding:15px 0px;
   cursor:pointer;
 }
 
 #question_wrapper .answer:hover, #question_wrapper .answer.selected {
-  background-color:rgba(60, 175, 255, 0.2);
+  background-color:rgba(63, 145, 255, 0.6);
+  color: #FFFFFF;
+}
+
+.htmlBackground {
+  position: fixed; 
+  z-index: -1;
+  top: 0; 
+  left: 0; 
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.9;
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.top_header {
+  text-align: center;
+  position: relative;
+}
+.top_header .background {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  opacity: 0.3;
+}
+.top_header .logo {
+      margin: 3vh;
+      width: 300px;
+  }
+@media only screen and (max-width: 600px) {
+  .top_header .logo {
+    margin: 3vh;
+    width: 180px;
+  }
+}
+
+.main_banner {
+  position: relative;
+  text-align: center;
+  background-color: rgba(8, 81, 178, 0.7);
+  font-family: "Times New Roman", Times, serif;
+  color: #D5ECFB;
+}
+.main_banner h1{
+  padding-bottom: 10px;
+  color: white;
+}
+.main_banner button {
+  padding: 15px;
+  background-color: rgba(63, 145, 255, 0.6);
+  font-size: 30px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.highlight {
+  color: white;
 }
 
 .dwarfContainer {
-  margin-right: 10vw;
-  float: right;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
   width: 250px;
-  height: 250px;
+  height: 360px;
 }
-
 .dwarfContainer .dwarf{
   width: 250px;
 }
-
-
 .dwarfContainer .gameTitle {
+  z-index: 5;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
   width: 250px;
-  bottom: 0;
+  right: 5px;
+  top: 240px;
 }
