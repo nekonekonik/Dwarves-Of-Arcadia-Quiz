@@ -22,6 +22,12 @@ angular.module('dwarvesOfArcadiaQuizApp')
       descriptionsTW.religious = "精神守衛\n純潔，愛好和平，快樂——這類型的矮人讓你永遠挑不出毛病。秉持著堅定的信念，他們即使在最荒涼的時刻也能找到希望。他們喜歡在陽光下的草原上轉圈，人類探險家會感到那是一種儀式（也許是敬拜他們的太陽神）。然而實際上，他們只是在轉圈而已。\n啊，天空真美啊！";
       descriptionsTW.intelligent = "博學智者\n智慧，好奇，內省——這類矮人是阿卡迪亞最聰明的矮人。遍布阿卡迪亞城市的科技進步和宏偉建築都是這群偉大的建造者促成的。沒有神秘比討論哲學，藝術和科學（以及其他矮人多麼愚蠢）更讓他們滿足的了。\n”見證我下個最偉大的創造吧啊哈哈哈哈！“";
 
+      var descriptionsCN = {};
+      descriptionsCN.brave = "神勇武士\n勇敢，强壮，欢乐——此类型的小矮人在危险面前无所畏惧。他们永远也不会在一场争斗中认输。尽管他们外表强悍，他们却是无比忠诚的感性生物。挑衅他们或他们的家人，你就再也看不到阿卡迪亚的日出。\n“为了阿卡迪亚～！ ！ ”";
+      descriptionsCN.business = "吸金富豪\n勤劳，上进，精明——此类型的矮人是精于世故的商人。拥有过人口才，使得与他​​们交易的新手常常落得钱袋空空，只能带着一袋臭鱼回家（而且他们还会让人觉得那是一袋美味的刺身？）\n”亲爱的，那鱼可值500先令呢～“";
+      descriptionsCN.religious = "精神守卫\n纯洁，爱好和平，快乐——这类型的矮人让你永远挑不出毛病。秉持着坚定的信念，他们即使在最荒凉的时刻也能找到希望。他们喜欢在阳光下的草原上转圈，人类探险家会感到那是一种仪式（也许是敬拜他们的太阳神）。然而实际上，他们只是在转圈而已。\n啊，天空真美啊！";
+      descriptionsCN.intelligent = "博学智者\n智慧，好奇，内省——这类矮人是阿卡迪亚最聪明的矮人。遍布阿卡迪亚城市的科技进步和宏伟建筑都是这群伟大的建造者促成的。没有神秘比讨论哲学，艺术和科学（以及其他矮人多么愚蠢）更让他们满足的了。\n”见证我下个最伟大的创造吧啊哈哈哈哈！ “";
+
       $scope.result = results.slice(0).sort(function(a, b) { return b.value - a.value; })[0].personality; 
       $scope.dwarfType = results.slice(0).sort(function(a, b) { return b.value - a.value; })[0].dwarfType; 
       $scope.resultDescription = results.slice(0).sort(function(a, b) { return b.value - a.value; })[0].resultDescription;  
@@ -54,11 +60,10 @@ angular.module('dwarvesOfArcadiaQuizApp')
                 action:"pubilish",
                 type:"web",
                 language:"zh_cn",
-                button_type:"red",
-                button_size:"middle",
-                refer:"y",
                 appkey:"3IqWNs",
-                id: "wb_publisher"
+                id: "wb_publish",
+                default_text: "我的内在矮人类型是:\n" + descriptionsCN[$scope.result] + "\nhttps://doa-testing.herokuapp.com/#/zh-CN",
+                default_image: 'https://doa-testing.herokuapp.com/assets/images/' + $scope.result + '-share.png',
             });
         });
       };
