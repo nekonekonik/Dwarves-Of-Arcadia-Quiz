@@ -54,10 +54,10 @@ angular.module('dwarvesOfArcadiaQuizApp')
                 action:"pubilish",
                 type:"web",
                 language:"zh_cn",
-                button_type:"gray",
+                button_type:"red",
                 button_size:"middle",
-                tag:"阿卡迪亚小矮人",
                 refer:"y",
+                appkey:"3IqWNs",
                 id: "wb_publisher"
             });
         });
