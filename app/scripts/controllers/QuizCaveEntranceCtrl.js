@@ -7,6 +7,7 @@ angular.module('dwarvesOfArcadiaQuizApp')
       console.log('brave', quizProcessor.brave());
 
       $window.location = '/#/' + quizProcessor.locale() + '/quiz/Secret-Cave';
+      ga('send', 'event', '3 cave entrance - brave');
     };
 
     $scope.processBusiness = function() {
@@ -14,6 +15,7 @@ angular.module('dwarvesOfArcadiaQuizApp')
       console.log('business', quizProcessor.business());
 
       $window.location = '/#/' + quizProcessor.locale() + '/quiz/Secret-Cave';
+      ga('send', 'event', '3 cave entrance - business');
     };
 
     $scope.processReligious = function() {
@@ -21,6 +23,7 @@ angular.module('dwarvesOfArcadiaQuizApp')
       console.log('religious', quizProcessor.religious());
 
       $window.location = '/#/' + quizProcessor.locale() + '/quiz/Secret-Cave';
+      ga('send', 'event', '3 cave entrance - religious');
     };
 
     $scope.processIntelligent = function() {
@@ -28,6 +31,7 @@ angular.module('dwarvesOfArcadiaQuizApp')
       console.log('intelligent', quizProcessor.intelligent());
 
       $window.location = '/#/' + quizProcessor.locale() + '/quiz/Secret-Cave';
+      ga('send', 'event', '3 cave entrance - intelligent');
     };
 
   });

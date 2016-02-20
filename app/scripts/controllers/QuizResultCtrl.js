@@ -35,23 +35,23 @@ angular.module('dwarvesOfArcadiaQuizApp')
       ga("send", "event", $scope.result);
 
       $scope.shareToFB = function(){
-        FB.ui({
-          method: 'feed',
-          name: 'Which dwarf personality are you?',
-          link: 'http://dwarves-of-arcadia-quiz.herokuapp.com/#/en-us',
-          picture: 'http://dwarves-of-arcadia-quiz.herokuapp.com/assets/images/' + $scope.result + '-share.png',
-          description: descriptions[$scope.result],
-        }, function(response){});
+        var url = "https://www.facebook.com/dialog/feed?app_id=235837800082978" +
+                  "&redirect_uri=https://dwarves-of-arcadia-quiz.herokuapp.com/" +
+                  "&link=https%3A%2F%2Fdwarves-of-arcadia-quiz.herokuapp.com%2F%23%2Fen-us%2F" +
+                  "&name=" + escape("Which dwarf personality are you?") +
+                  "&picture=http://dwarves-of-arcadia-quiz.herokuapp.com/assets/images/" + escape($scope.result) + "-share.png" +
+                  "&description=" + escape(descriptions[$scope.result]);
+        window.location.href = url;
       };
 
       $scope.shareToFBTW = function() {
-        FB.ui({
-          method: 'feed',
-          name: '你的內在矮人類型是:',
-          link: 'http://dwarves-of-arcadia-quiz.herokuapp.com/#/zh-TW',
-          picture: 'http://dwarves-of-arcadia-quiz.herokuapp.com/assets/images/' + $scope.result + '-share.png',
-          description: descriptionsTW[$scope.result],
-        }, function(response){});
+        var url = "https://www.facebook.com/dialog/feed?app_id=235837800082978" +
+                  "&redirect_uri=https://dwarves-of-arcadia-quiz.herokuapp.com/" +
+                  "&link=" + escape("http://dwarves-of-arcadia-quiz.herokuapp.com/#/zh-TW") +
+                  "&name=你的內在矮人類型是" +
+                  "&picture=http://dwarves-of-arcadia-quiz.herokuapp.com/assets/images/" + escape($scope.result) + "-share.png" +
+                  "&description=" + descriptionsTW[$scope.result];
+        window.location.href = url;
       };
 
       $scope.shareToWeiBo = function() {
